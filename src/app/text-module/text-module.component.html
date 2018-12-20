@@ -1,0 +1,18 @@
+
+
+<div class="form-group">
+  <label for="email">Text</label>
+  <div class="input-group input-group-sm mb-3">
+      <input type="text" class="form-control" [(ngModel)]="text" placeholder="Enter text">
+      <div class="input-group-prepend">
+        <button type="text" class="input-group-text" (click)="btnAddTxt()">Add</button>
+      </div>
+    </div>
+</div>
+
+<div class="form-group">
+  <label>Color</label>
+  <div class="input-group">
+    <span *ngFor="let c of swatchesColors" class="color-picker-cell" [style.background]="c" (click)="updateColor(c)"></span>
+  </div>								 
+</div>
